@@ -1,0 +1,13 @@
+services:
+  db:
+    image: mysql:8
+    volumes:
+      - ./data/db:/var/lib/mysql
+    ports:
+      - $MYSQL_LISTEN:3306
+    environment:
+      MYSQL_DATABASE: sfl_info
+      MYSQL_USER: sfl_info
+      MYSQL_PASSWORD: sfl_info
+      MYSQL_ROOT_PASSWORD: 'root'
+      MYSQL_ALLOW_EMPTY_PASSWORD: false
