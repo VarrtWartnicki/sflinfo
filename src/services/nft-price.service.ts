@@ -21,7 +21,7 @@ export class NFTPriceService {
             this.prisma.nftPrice.create({
             data: {
               nftId: nft.id,
-              price: nft.floor,
+              price: Number(nft.floor.toFixed(7)),
               date: new Date(),
             },
           })
